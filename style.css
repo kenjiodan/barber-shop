@@ -92,8 +92,8 @@ i {
   display: block;
   position: absolute;
   background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -196,6 +196,148 @@ i {
 @media screen and (max-width: 768px) {
   .about-content {
     flex-direction: column;
+  }
+}
+.services {
+  background-color: #ffffff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.services-content p {
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 150%;
+  max-width: 780px;
+}
+
+.services-haircuts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 44px 34px;
+}
+
+.haircuts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.haircuts img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.35s;
+}
+.haircuts img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.haircuts-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #edeaef;
+  padding: 14px;
+  z-index: 99;
+}
+.haircuts-info span {
+  background-color: #d34040;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .services-haircuts {
+    flex-direction: column;
+    max-width: 85%;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 0;
+  gap: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.footer-icons a:hover i {
+  animation: translateY 0.8s infinite alternate;
+  color: #d34040;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.btn-whatsapp {
+  position: fixed;
+  bottom: 14px;
+  right: 24px;
+  z-index: 99;
+}
+.btn-whatsapp img {
+  max-width: 72px;
+  transition: transform 0.4s;
+}
+.btn-whatsapp img:hover {
+  transform: scale(1.1);
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -144px;
+  padding: 6px;
+  border-radius: 8px;
+  text-align: center;
+  background: #232224;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-whatsapp img {
+    max-width: 64px;
   }
 }
 body {
